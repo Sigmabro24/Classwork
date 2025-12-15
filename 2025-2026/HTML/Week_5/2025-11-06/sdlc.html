@@ -3,37 +3,58 @@
     <head>
         <title></title>
         <style>
-            table, th, td {
+            :root {
+                --color: #d0d0f5;
+            }
+
+            table, th, td{
                 border: 1px solid black;
+            }
+            p{
+                border: 2px solid black;
             }
             a {
                 display: inline-block;
-                background-color: #b3d4fc;
+                background-color: #d0d0f5;
                 padding: 4px;
                 margin-right: 10px;
+                color: purple;
             }
             h1 {
                 font-size: 40px
+            }
+
+
+            thead,
+            tfoot, p {
+                background: var(--color);
+            }
+
+            tbody,p, tr:nth-child(even) {
+                background: color-mix(in srgb, var(--color), transparent 60%);
             }
         </style>
 
     </head>
     <body>
-    <h1 id="sdlc"> The Software Development Life Cycle</h1>
+    <h1 id="sdlc2"> The Software Development Life Cycle</h1>
     <h2>Contents</h2>
-    <a href id= " sdlc">Software Development Life Cycle</a>
-    <a href id = "12">Agile Phase</a>
-    <a href id = " desc">Agile Phases Descriptions</a>
-    <h2>Software Development Life Cycle</h2>
+    <a href="#sdlc">Software Development Life Cycle</a>
+    <a href ="#agile">Agile Phase</a>
+    <a href ='#desc'>Agile Phases Descriptions</a>
+    <a href ="#table">Phase and Roles of SDLC</a>
+    <h2 id="sdlc">Software Development Life Cycle</h2>
     <p>The software development lifecycle (SDLC) is the cost-effective and time-efficient process that development teams use to design and build high-quality software. The goal of SDLC is to minimize project risks through forward planning so that software meets customer expectations during production and beyond. This methodology outlines a series of steps that divide the software development process into tasks you can assign, complete, and measure.</p>
-    <h2>Agile Description</h2>
-    <p>The Agile SDLC is a software development methodology that emphasizes collaborative thinking, feedback-driven decision-making, and cyclical change. Under Agile, teams complete work in sprints—work cycles lasting 1–4 weeks—that allow frequent discussions about what’s working and what’s not.</p>
-    <h2 id = " 12">Agile Phases</h2>
-    <table id ="desc">
+    <h2 id = "desc">Agile Description</h2>
+    <p>The Agile SDLC is a software development methodology that emphasizes collaborative thinking, feedback-driven decision-making, and cyclical change. Under Agile, teams complete work in sprints work cycles lasting 1 to 4 weeks that allow frequent discussions about what's working and what's not.</p>
+    <h2 id = "agile">Agile Phases</h2>
+    <table id ="table">
+        <thead>
         <tr>
             <th>Agile Phases</th>
             <th>Description</th>
         </tr>
+        </thead>
         <tr>
             <th>Concept</th>
             <td>The planning phase is the foundation of any successful software development project. Project goals, objectives, and requirements are gathered and documented during this phase</td>
@@ -62,23 +83,25 @@
     </table>
     <h2>Phases and Roles of SDLC</h2>
     <table>
+        <thead>
         <tr>
             <th>Phase Name</th>
             <th>Roles that do most of the work in this phase</th>
             <th>Artifacts created in this phase</th>
             <th>Description of the Phase</th>
         </tr>
+        </thead>
         <tr>
             <td>Idea</td>
             <td>
                 <details>
-                    <summary>Project Manager</summary>
-                    The main responsibilities of the PO are to set the direction and prioritize. Since he or she represents the stakeholders, the PO must clearly communicate their interests to the development team.
+                    <summary>Business Owner</summary>
+                    The individual who runs the business.
                 </details>
             </td>
             <td>
                 <details>
-                    <summary>Documentation</summary>
+                    <summary>Software Project Scope Document</summary>
                     Contains the full plan of the project including end goals
                 </details>
             </td>
@@ -91,14 +114,14 @@
             <td>Planning</td>
             <td>
                 <details>
-                    <summary>Developers and Product Teams</summary>
-                    Handles both front-end and back-end development tasks.
+                    <summary>Project manager</summary>
+                    The main responsibilities of the PO are to set the direction and prioritize. Since he or she represents the stakeholders, the PO must clearly communicate their interests to the development team.
                 </details>
             </td>
             <td>
                 <details>
-                    <summary>Prototype</summary>
-                    They make a basic version of the project to plan out things
+                    <summary>Software Vision Statement</summary>
+                    The overall plan for the project
                 </details>
             </td>
             <td>The information from this analysis forms the building blocks of a basic project. The quality of the project is a result of planning. Thus, in this stage, the basic project is designed with all the available information.</td>
@@ -116,7 +139,7 @@
             </td>
             <td>
                 <details>
-                    <summary>A requirement documentation</summary>
+                    <summary> Requirement documentation</summary>
                     A document covering the needs of the stakeholders and what the project needs to succeed basically providing the requirements
                 </details>
             </td>
@@ -135,7 +158,7 @@
             </td>
             <td>
                 <details>
-                    <summary>Architectural design, UI/UX design, database design, technical specification</summary>
+                    <summary>Wireframe and Software Requirements Specification</summary>
                 Create designs that appeal to the users visually and allows them to use it easily
                 </details>
             </td>
@@ -148,13 +171,13 @@
             <td>Development</td>
             <td>
                 <details>
-                    <summary>Engineers and Developers</summary>
+                    <summary>Back and Front End Developers</summary>
                     Engineers and Developers write code and create the project
                 </details>
             </td>
             <td>
                 <details>
-                    <summary>Coded Prototype</summary>
+                    <summary>Code</summary>
                     Developers use an appropriate programming language, Java or otherwise, to write the code, guided by the SDD and coding guidelines. This document, acting as a roadmap, ensures the software aligns with the vision set in earlier phases.
                 </details>
             </td>
@@ -173,7 +196,7 @@
             </td>
             <td>
                 <details>
-                    <summary>Tested code</summary>
+                    <summary>Testing plan</summary>
                     When a test reveals a bug, it is documented in detail, noting its symptoms, reproduction method, and its influence on the software. These bugs are then sent back to the developers for rectification. Once the required fixes are implemented, the software re-enters the testing phase for validation. This process is a cycle of persistent refinement until the software complies with all predetermined parameters.
                 </details>
             </td>
@@ -192,7 +215,7 @@
             </td>
             <td>
                 <details>
-                    <summary>Completed Project</summary>
+                    <summary>Released Project/Release Plan</summary>
                     Stage in sdlc where code is completed and tested application is moved to the production environment and made available to end users
                 </details>
             </td>
@@ -211,7 +234,7 @@
             </td>
             <td>
                 <details>
-                    <summary>Fixed code</summary>
+                    <summary>Maintenance Plan</summary>
                     The primary focus is to adapt to the software's changing needs. This adaptation involves responding to user feedback, resolving unexpected issues, and upgrading the software based on users' evolving requirements. It's a continuous process of refining and adapting, much like a gardener tending to their garden.
                 </details>
             </td>

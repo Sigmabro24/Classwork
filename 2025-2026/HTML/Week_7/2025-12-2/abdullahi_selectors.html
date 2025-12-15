@@ -16,10 +16,10 @@
     <!--    Then write a CSS ruleset that selects the id of background and makes its background any color you want-->
     <!--    Then write a CSS ruleset that selects all p tags and makes their font-style be "sans-serif"-->
     <style>
-        h1{
-            color:white;
-            background-color:black;
-        }
+        /*h1{*/
+        /*    color:white;*/
+        /*    background-color:black;*/
+        /*}*/
         h2{
             background-color:black;
             color:purple;
@@ -28,12 +28,13 @@
             background-color:red;
             color:yellow;
         }
+        .redText {
+            color: red;
+        }
         .greenText{
             color:green;
         }
-        .redText{
-            color:red;
-        }
+
         #foo{
             color:brown;
         }
@@ -52,7 +53,7 @@
 
 </head>
 <body>
-<header>
+<header class="redText greenText">
     <h1>H1 Header</h1>
 </header>
 <main>
