@@ -21,3 +21,5 @@ def divide_two(first,second):
 
 if __name__ == '__main__':
     main()
+
+subtract_two(2,3)

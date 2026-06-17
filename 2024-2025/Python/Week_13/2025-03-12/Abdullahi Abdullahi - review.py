@@ -62,5 +62,9 @@ print(type(gpa))
 
 # Use Python to output a one line complete sentence with your name, age and
 # GPA.
-
+print()
+print()
+print()
+print()
+print()
 print("Your name is",name,"your age is",age,"and your gpa is",gpa)
